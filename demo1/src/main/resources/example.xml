@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<books>
+          <book id="1001">
+           
+                <name>面纱</name>
+                <info>请记住我，虽然再见必须说</info>
+          </book>
+           <book id="1002">
+                <name>人生第一次</name>
+                <info>愿他们、我们的一生平淡而有意义</info>
+          </book>
+</books>

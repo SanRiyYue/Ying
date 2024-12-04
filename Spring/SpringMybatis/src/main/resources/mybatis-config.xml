@@ -1,0 +1,7 @@
+<!-- mybatis-config.xml -->
+
+<configuration>
+    <mappers>
+        <mapper resource="UserMapper.xml"/>
+    </mappers>
+</configuration>

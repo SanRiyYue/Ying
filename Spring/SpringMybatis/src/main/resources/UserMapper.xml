@@ -1,0 +1,7 @@
+<!-- UserMapper.xml -->
+<mapper namespace="org.example.mapper.UserMapper">
+    <!--查询用户信息-->
+    <select id ="getById" resultType="org.example.entity.User">
+        SELECT * FROM users WHERE id = #{id}
+    </select>
+</mapper>

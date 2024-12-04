@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 配置SpringMVC的核心控制器DispatcherServlet-->
+<web-app>
+    <servlet>
+        <servlet-name>DispatcherServlet</servlet-name>
+        <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+        <init-param>
+            <param-name>contextClass</param-name>
+            <param-value>org.springframework.web.context.support.AnnotationConfigWebApplicationContext</param-value>
+        </init-param>
+        <init-param>
+            <param-name>contextConfigLocation</param-name>
+            <param-value>classpath:spring-mvc.xml</param-value>
+        </init-param>
+        <!--
+         <load-on-startup>1</load-on-startup>作用
+         1) load-on-startup元素标记容器是否在启动的时候就加载这个Servlet（实例化并调用其init()
+         2)它的值必须是一个整数，表示servlet应该被载入的顺序
+         3)当值大于或者等于0时，表示容器在应用启动时就加载并初始化这个servlet;
+         4)当值小于0或者没有指定时，则表示容器在该servlet被选择时才会去加载;
+         5)正数的值越小，该servlet加载的优先级越高，应用启动时就越先加载
+         6)当值相同时，容器会自己选择顺序来加载;
+        -->
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>DispatcherServlet</servlet-name>
+        <url-pattern>/*</url-pattern>
+    </servlet-mapping>
+</web-app>
